@@ -417,7 +417,9 @@ y = df["Log_Compressive_Strength"]
 X = df.drop(columns=[
     "Compressive strength (Mpa)",
     "Log_Compressive_Strength",
-    "Precursor"
+    "Precursor",
+    "Strain (%)",
+    "Stress (MPa)"
 ])
 
 X = pd.get_dummies(X, columns=["Precursor_Category"], drop_first=True)
